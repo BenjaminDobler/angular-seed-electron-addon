@@ -13,6 +13,8 @@ if (process.argv.length >= 4 && process.argv[2]=== 'port') {
   port = process.argv[3];
 }
 
+console.log("Port", port);
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
