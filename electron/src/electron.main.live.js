@@ -8,6 +8,11 @@ const url = require('url')
 
 console.log("PROCESS ARGS ", process.argv);
 
+let port = 5555;
+if (process.args.length >= 4 && process.args[2]=== 'port') {
+  port = process.args[3];
+}
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -20,7 +25,7 @@ function createWindow () {
 
     // and load the index.html of the app.
     win.loadURL(url.format({
-    pathname: 'localhost:5555',
+    pathname: 'localhost:' + port,
     protocol: 'http:',
     slashes: true
   }))
