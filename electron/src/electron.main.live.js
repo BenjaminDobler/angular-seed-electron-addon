@@ -9,7 +9,7 @@ const url = require('url')
 console.log("PROCESS ARGS ", process.argv);
 
 let port = 5555;
-if (process.argv.length >= 4 && process.argv[2]=== 'port') {
+if (process.argv.length >= 4 && process.argv[2]=== '-port') {
   port = process.argv[3];
 }
 
